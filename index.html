@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WCAG</title>
+		<style>
+		* {
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0px;
+			font-family: Arial;
+		}
+		@keyframes an1 {
+			0% { background: white; }
+			100% { background: #0FF; }
+		}
+		@keyframes an2 {
+			0% { background: #EEE; }
+			100% { background: #DDD; }
+		}
+		body {
+			border: 2px solid black;
+		}
+		header {
+			border-bottom: 2px solid black;
+			padding: 15px;
+			padding-left: 8vw;
+		}
+		main {
+			display: flex;
+		}
+		#left, #content {
+			padding: 10px;
+		}
+		#left {
+			width: 25%;
+			border-right: 4px double black;
+		}
+		nav ul {
+			list-style-type: none;
+		}
+		nav a {
+			display: block;
+			margin-bottom: 5px;
+			border: 2px solid black;
+			padding: 5px;
+			
+			color: black;
+			text-decoration: none;
+		}
+		nav a:hover, nav a:focus {
+			animation: an1 3s;
+		}
+		#content {
+			width: 75%;
+		}
+		p { margin-bottom: 5px; }
+		dfn {
+			font-style: inherit;
+			font-weight: bold;
+		}
+		#content ul {
+			margin-left: 27px;
+		}
+		aside {
+			margin: 3px;
+			border: 1px solid #999;
+			padding: 5px;
+			background-color: #EEE;
+		}
+		aside:hover {
+			animation: an2 3s;
+		}
+		footer {
+			border-top: 2px solid black;
+			text-align: center;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Wprowadzenie do WCAG</h1>
+		</header>
+		<main>
+			<section id="left">
+				<nav><ul>
+					<li><a href="#">Tu jesteś</a></li>
+					<li><a href="https://www.gov.pl/web/dostepnosc-cyfrowa/wcag-21-w-skrocie">Źródło (GOV.PL)</a></li>
+					<li><a href="https://www.w3.org/TR/WCAG21/">Dodatek: Wytyczne (W3.ORG)</a></li>
+				</ul></nav>
+			</section>
+			<section id="content">
+				<p>WCAG 2.1 to zestaw reguł, które mają w założeniu zagwarantować, że osoby z różnymi niepełnosprawnościami lub trudnościami będą w stanie używać danej strony internetowej.</p>
+				<p><dfn>Strona dostępna cyfrowo</dfn> - Strona, która wciela w życie reguły WCAG.</p>
+				<p>WCAG opiera się na czterech zasadach: postrzegalności, funkcjonalności, zrozumiałości, solidności (kompatybilności).</p>
+				<h2>Postrzegalność</h2>
+				<p>Upewnij się, by wszyscy użytkownicy mogli używać twojej strony, nawet jeśli są pozbawieni pewnych zmysłów (wzroku, słuchu itp.) Przykłady rozwiązań, które można wdrożyć już teraz, to:</p>
+				<ul>
+					<li>Opisy alternatywne do zdjęć i grafiki,</li>
+					<li>Wyróżnienia nie opierające się na kolorze,</li>
+					<li>Kolor tekstu wyraźnie widoczny na tle tła,</li>
+					<li>Unikanie wstawiania obrazów tekstu.</li>
+				</ul>
+				<h2>Funkcjonalność</h2>
+				<p>Projektuj stronę tak, by użytkownicy mogli jej używać niezależnie od używanego hardware'u (myszka, dotyk, klawiatura...) Przykłady rozwiązań, które można wdrożyć już teraz, to:</p>
+				<ul>
+					<li>Łącze pozwalające szybko przeskoczyć do treści,</li>
+					<li>Dobra widoczność <dfn>fokusu</dfn>, czyli elementu obecnie wybieranego za pomocą klawiatury.</li>
+				</ul>
+				<h2>Zrozumiałość</h2>
+				<aside>Uwaga! W polskim i unijnym prawie ta zasada jest nazywana "<dfn>kompatybilnością</dfn>".</aside>
+				<p>Uczyń treść i sposób działania strony zrozumiałe dla użytkowników. Przykłady rozwiązań, które można wdrożyć już teraz, to:</p>
+				<ul>
+					<li>Prosty język,</li>
+					<li>Unikanie i/lub wyjaśnianie trudnych słów i wyrażeń,</li>
+					<li>Wyjaśnienia skrótów,</li>
+					<li>Spójny wygląd i działanie elementów na wszystkich podstronach.</li>
+				</ul>
+				<h2>Solidarność</h2>
+				<p>Pamiętaj, by strona działała prawidłowo w wielu różnych programach (przeglądarkach, itd.) Niewiele można zrobić już teraz, ale dobrymi przykładami są:</p>
+				<ul>
+					<li>Prawidłowy kod (pamiętaj, by sprawdzać na <a href="https://validator.w3.org/">Validatorze</a>!),</li>
+					<li>Korzystanie z <a href="https://www.kminek.pl/globalny-reset-domyslnych-stylow-css-przegladarki/">arkusza zerującego Meyera</a>.</li>
+				</ul>
+				
+			</section>
+		</main>
+		<footer>Adrian Włodarski</footer>
+	</body>
+</html>
